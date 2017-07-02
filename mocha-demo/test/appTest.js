@@ -8,23 +8,29 @@ sayHelloResult = app.sayHello();
 addNumbersResult = app.addNumbers(5,5);
 
 describe("App", function(){
-  it('app should return hello', function() {
-    // let result = app.sayHello();
-    assert.equal(sayHelloResult, 'hello');
-  });
 
-  it('sayHello should return type string', function(){
-    // let result = app.sayHello();
-    assert.typeOf(sayHelloResult, 'string');
-  });
+  describe('sayHello', function(){
+    it('app should return hello', function() {
+      // let result = app.sayHello();
+      assert.equal(sayHelloResult, 'hello');
+    });
 
-  it('addNumbers should be more than 7', function(){
-    // let result = app.addNumbers(5,5); //ramdom numbers
-    assert.isAbove(addNumbersResult, 7);
-  });
+    it('sayHello should return type string', function(){
+      // let result = app.sayHello();
+      assert.typeOf(sayHelloResult, 'string');
+    });
+  })
 
-  it('addNumbers should should return type number', function(){
-    // let result = app.addNumbers(5,5); //ramdom numbers
-    assert.typeOf(addNumbersResult, 'number');
-  });
+  describe('addNumbers', function(){
+    it('addNumbers should be more than 7', function(){
+      // let result = app.addNumbers(5,5); //ramdom numbers
+      assert.isAbove(addNumbersResult, 7);
+    });
+
+    it('addNumbers should should return type number', function(){
+      // let result = app.addNumbers(5,5); //ramdom numbers
+      assert.typeOf(addNumbersResult, 'number');
+    });
+  })
+
 });
