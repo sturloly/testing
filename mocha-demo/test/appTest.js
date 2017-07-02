@@ -19,4 +19,9 @@ describe("App", function(){
     let result = addNumbers(5,5); //ramdom numbers
     assert.isAbove(result, 7);
   });
+
+  it('addNumbers should should return type number', function(){
+    let result = addNumbers(5,5); //ramdom numbers
+    assert.typeOf(result, 'number');
+  });
 });
